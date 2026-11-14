@@ -60,9 +60,67 @@
     "sameAs": ["https://www.instagram.com/clinicadnavitalfiosepele/"]
   }
   </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Como funciona a avaliação capilar?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Analisamos o couro cabeludo e os fios com a tricoscopia, que permite observar detalhes que não aparecem a olho nu. A partir dessa avaliação, montamos um protocolo personalizado para o seu caso."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "A terapia capilar ajuda na queda de cabelo?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A terapia capilar cuida das alterações do couro cabeludo e trabalha para reduzir a queda e fortalecer os fios. Como cada caso tem uma causa, o tratamento só é indicado depois da avaliação, e os resultados são individuais."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Vocês tratam alopecia areata?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sim. A alopecia areata exige estratégia e acompanhamento, e o tratamento considera os fatores inflamatórios e imunológicos envolvidos."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Quantas sessões vou precisar?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Depende do seu caso. O número de sessões e a frequência são definidos na avaliação, com acompanhamento a cada etapa do tratamento."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "O que é a Escova Ozonizada?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "É uma escova que vai além da beleza: cuida do couro cabeludo e dos fios ao mesmo tempo, deixando o cabelo mais leve, brilhante e com movimento natural."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Como faço para agendar?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Pelo WhatsApp (94) 99175-4846, de segunda a sexta, das 9h às 18h. A clínica fica na Rua Angelim, 192, Nova Canaã, em Canaã dos Carajás - PA."
+        }
+      }
+    ]
+  }
+  </script>
 </head>
 
 <body class="bg-sand-texture text-textoEscuro antialiased min-h-screen relative">
+
+<a href="#conteudo" class="pular-link">Pular para o conteúdo</a>
 
 <!-- DETALHES DECORATIVOS DE FUNDO (gradiente em vez de filter: blur, que pesava no celular) -->
 <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden" aria-hidden="true">
@@ -320,18 +378,22 @@
           </p>
         </div>
         <div class="md:col-span-7">
-          <ul class="grid sm:grid-cols-2 gap-2.5">
-            <li class="sinal"><i class="fa-solid fa-check" aria-hidden="true"></i><span>Mais fios na escova ou no ralo</span></li>
-            <li class="sinal"><i class="fa-solid fa-check" aria-hidden="true"></i><span>Falhas no couro cabeludo</span></li>
-            <li class="sinal"><i class="fa-solid fa-check" aria-hidden="true"></i><span>Caspa que sempre volta</span></li>
-            <li class="sinal"><i class="fa-solid fa-check" aria-hidden="true"></i><span>Fios finos e enfraquecidos</span></li>
-            <li class="sinal"><i class="fa-solid fa-check" aria-hidden="true"></i><span>Mudanças na menopausa</span></li>
-            <li class="sinal"><i class="fa-solid fa-check" aria-hidden="true"></i><span>Queda durante o emagrecimento</span></li>
-          </ul>
-          <a href="https://api.whatsapp.com/send?phone=5594991754846&text=Ol%C3%A1%2C%20equipe%20DNA%20Vital%21%20Vim%20pelo%20site%2C%20percebi%20alguns%20sinais%20no%20meu%20cabelo%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20capilar." target="_blank" rel="noopener noreferrer"
+          <p class="text-[11px] uppercase tracking-widest font-bold text-nevoa-dourada mb-2.5 flex items-center gap-1.5">
+            <i class="fa-regular fa-hand-pointer" aria-hidden="true"></i> Toque nos sinais que você percebe:
+          </p>
+          <fieldset id="sinais-lista" class="grid sm:grid-cols-2 gap-2.5 border-0 p-0 m-0 min-w-0">
+            <legend class="sr-only">Sinais que você percebe no seu cabelo</legend>
+            <label class="sinal"><input type="checkbox" class="sinal__check" value="Mais fios na escova ou no ralo"><i class="fa-solid fa-check" aria-hidden="true"></i><span>Mais fios na escova ou no ralo</span></label>
+            <label class="sinal"><input type="checkbox" class="sinal__check" value="Falhas no couro cabeludo"><i class="fa-solid fa-check" aria-hidden="true"></i><span>Falhas no couro cabeludo</span></label>
+            <label class="sinal"><input type="checkbox" class="sinal__check" value="Caspa que sempre volta"><i class="fa-solid fa-check" aria-hidden="true"></i><span>Caspa que sempre volta</span></label>
+            <label class="sinal"><input type="checkbox" class="sinal__check" value="Fios finos e enfraquecidos"><i class="fa-solid fa-check" aria-hidden="true"></i><span>Fios finos e enfraquecidos</span></label>
+            <label class="sinal"><input type="checkbox" class="sinal__check" value="Mudanças no cabelo na menopausa"><i class="fa-solid fa-check" aria-hidden="true"></i><span>Mudanças na menopausa</span></label>
+            <label class="sinal"><input type="checkbox" class="sinal__check" value="Queda durante o emagrecimento"><i class="fa-solid fa-check" aria-hidden="true"></i><span>Queda durante o emagrecimento</span></label>
+          </fieldset>
+          <a id="sinais-cta" href="https://api.whatsapp.com/send?phone=5594991754846&text=Ol%C3%A1%2C%20equipe%20DNA%20Vital%21%20Vim%20pelo%20site%2C%20percebi%20alguns%20sinais%20no%20meu%20cabelo%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20capilar." target="_blank" rel="noopener noreferrer"
              class="btn-claro-glow glare-hover w-full mt-5 py-3.5 text-xs uppercase tracking-wider font-bold">
-            <i class="fa-solid fa-magnifying-glass text-marinho" aria-hidden="true"></i>
-            <span>Quero fazer minha avaliação</span>
+            <i class="fa-brands fa-whatsapp text-emerald-600 text-sm" aria-hidden="true"></i>
+            <span id="sinais-cta-texto">Quero fazer minha avaliação</span>
           </a>
         </div>
       </div>
@@ -731,11 +793,51 @@
 </section>
 
 <!-- =========================================================
+     DÚVIDAS FREQUENTES (details/summary nativo, sem JS)
+========================================================= -->
+<section id="duvidas" class="pt-10 pb-6 sm:pt-12 sm:pb-8 px-4 sm:px-6 max-w-6xl mx-auto border-t border-nevoa-escura/50">
+  <div class="text-center max-w-xl mx-auto mb-8">
+    <span class="text-xs uppercase tracking-widest text-celeste font-bold block mb-1"><span class="rotulo-num">05</span>Tire suas dúvidas</span>
+    <h2 class="font-serif font-bold text-3xl sm:text-4xl text-marinho">
+      Perguntas Frequentes
+    </h2>
+    <span class="orn" aria-hidden="true"></span>
+  </div>
+
+  <div class="max-w-3xl mx-auto space-y-3">
+    <details class="faq-item" open>
+      <summary class="faq-q"><span>Como funciona a avaliação capilar?</span><i class="fa-solid fa-plus faq-icone" aria-hidden="true"></i></summary>
+      <p class="faq-a">Analisamos o couro cabeludo e os fios com a tricoscopia, que permite observar detalhes que não aparecem a olho nu. A partir dessa avaliação, montamos um protocolo personalizado para o seu caso.</p>
+    </details>
+    <details class="faq-item">
+      <summary class="faq-q"><span>A terapia capilar ajuda na queda de cabelo?</span><i class="fa-solid fa-plus faq-icone" aria-hidden="true"></i></summary>
+      <p class="faq-a">A terapia capilar cuida das alterações do couro cabeludo e trabalha para reduzir a queda e fortalecer os fios. Como cada caso tem uma causa, o tratamento só é indicado depois da avaliação, e os resultados são individuais.</p>
+    </details>
+    <details class="faq-item">
+      <summary class="faq-q"><span>Vocês tratam alopecia areata?</span><i class="fa-solid fa-plus faq-icone" aria-hidden="true"></i></summary>
+      <p class="faq-a">Sim. A alopecia areata exige estratégia e acompanhamento, e o tratamento considera os fatores inflamatórios e imunológicos envolvidos.</p>
+    </details>
+    <details class="faq-item">
+      <summary class="faq-q"><span>Quantas sessões vou precisar?</span><i class="fa-solid fa-plus faq-icone" aria-hidden="true"></i></summary>
+      <p class="faq-a">Depende do seu caso. O número de sessões e a frequência são definidos na avaliação, com acompanhamento a cada etapa do tratamento.</p>
+    </details>
+    <details class="faq-item">
+      <summary class="faq-q"><span>O que é a Escova Ozonizada?</span><i class="fa-solid fa-plus faq-icone" aria-hidden="true"></i></summary>
+      <p class="faq-a">É uma escova que vai além da beleza: cuida do couro cabeludo e dos fios ao mesmo tempo, deixando o cabelo mais leve, brilhante e com movimento natural.</p>
+    </details>
+    <details class="faq-item">
+      <summary class="faq-q"><span>Como faço para agendar?</span><i class="fa-solid fa-plus faq-icone" aria-hidden="true"></i></summary>
+      <p class="faq-a">Pelo WhatsApp (94) 99175-4846, de segunda a sexta, das 9h às 18h. A clínica fica na Rua Angelim, 192, Nova Canaã, em Canaã dos Carajás - PA.</p>
+    </details>
+  </div>
+</section>
+
+<!-- =========================================================
      LOCALIZAÇÃO & ATENDIMENTO
 ========================================================= -->
 <section id="localizacao" class="pt-10 pb-14 sm:pt-12 sm:pb-16 px-4 sm:px-6 max-w-6xl mx-auto border-t border-nevoa-escura/50">
   <div class="text-center max-w-xl mx-auto mb-8">
-    <span class="text-xs uppercase tracking-widest text-celeste font-bold block mb-1"><span class="rotulo-num">05</span>Onde Estamos</span>
+    <span class="text-xs uppercase tracking-widest text-celeste font-bold block mb-1"><span class="rotulo-num">06</span>Onde Estamos</span>
     <h2 class="font-serif font-bold text-3xl sm:text-4xl text-marinho">
       Localização &amp; Atendimento
     </h2>

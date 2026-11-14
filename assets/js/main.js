@@ -742,9 +742,32 @@ document.addEventListener('click', (e) => {
 document.addEventListener('keydown', (e) => { if (e.key === 'Escape') toggleMenu(false); });
 window.addEventListener('resize', () => { if (window.innerWidth >= 1024) toggleMenu(false); });
 
+/* SINAIS DE ALERTA: os sinais marcados entram na mensagem do WhatsApp */
+function initSinais() {
+  const lista = document.getElementById('sinais-lista');
+  const cta = document.getElementById('sinais-cta');
+  const texto = document.getElementById('sinais-cta-texto');
+  if (!lista || !cta) return;
+  const MSG_PADRAO = 'Olá, equipe DNA Vital! Vim pelo site, percebi alguns sinais no meu cabelo e gostaria de agendar uma avaliação capilar.';
+  function atualizar() {
+    const marcados = Array.from(lista.querySelectorAll('.sinal__check:checked')).map(c => c.value);
+    const msg = marcados.length
+      ? `Olá, equipe DNA Vital! Vim pelo site e percebi estes sinais no meu cabelo:\n\n${marcados.map(s => `• ${s}`).join('\n')}\n\nGostaria de agendar uma avaliação capilar.`
+      : MSG_PADRAO;
+    cta.href = linkWhatsApp(msg, WHATS_NUMERO);
+    if (texto) {
+      const n = marcados.length;
+      texto.textContent = n ? `Enviar ${n} ${n === 1 ? 'sinal' : 'sinais'} pelo WhatsApp` : 'Quero fazer minha avaliação';
+    }
+  }
+  lista.addEventListener('change', atualizar);
+  atualizar(); // o navegador pode restaurar caixas marcadas ao voltar para a página
+}
+
 /* INICIALIZAÇÃO */
 document.addEventListener('DOMContentLoaded', () => {
   atualizarAnosDesde();
+  initSinais();
   renderTabsBA();
   initSliderBA();
   initInfiniteCarousel('reviews-wrapper', 'reviews-carousel-track', null, 0.55);

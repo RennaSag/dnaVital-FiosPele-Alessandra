@@ -40,8 +40,10 @@ textos pequenos usam o tom escurecido `#2B6E9B` (5,5:1 no branco).
 - Header em cápsula com menu sanduíche no celular
 - Status "Aberto/Fechado" em tempo real (fuso de Belém)
 - Card da terapeuta com filosofia de atendimento e resumo de diferenciais
-- Bloco "Seu cabelo está dando sinais?" (checklist de sintomas + botão de avaliação)
-- Seções numeradas (01 a 05), Resultados em faixa escura e chamada final antes do rodapé
+- Bloco "Seu cabelo está dando sinais?": a pessoa marca os sinais e o botão envia a lista pelo WhatsApp (`initSinais()` no main.js)
+- Seções numeradas (01 a 06), Resultados em faixa escura e chamada final antes do rodapé
+- Perguntas frequentes (`#duvidas`, com `<details>` nativo, sem JS) e marcação FAQPage para o Google
+- Link "Pular para o conteúdo" para quem navega pelo teclado
 - Tratamentos em cards "sticky" em cascata, com passo a passo (avaliação, protocolo, acompanhamento)
 - Carrossel infinito de resultados (artes do Instagram) com arraste, inércia e foto ampliada
 - Antes & Depois interativo com 2 casos
