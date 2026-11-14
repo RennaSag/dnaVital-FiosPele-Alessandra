@@ -1,0 +1,35 @@
+# Cabeçalhos HTTP aplicados pelo Cloudflare (Workers Static Assets ou Pages)
+
+/*
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: SAMEORIGIN
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=(), usb=()
+  Strict-Transport-Security: max-age=31536000
+
+# Página: sempre confere se há versão nova
+/
+  Cache-Control: public, max-age=0, must-revalidate
+/index.html
+  Cache-Control: public, max-age=0, must-revalidate
+
+# CSS e JS do site: o build adiciona ?v=<hash>, então podem ficar em cache por 1 ano
+/assets/css/*
+  Cache-Control: public, max-age=31536000, immutable
+/assets/js/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Bibliotecas com a versão no nome da pasta: nunca mudam
+/assets/vendor/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Imagens: 7 dias (se trocar uma foto mantendo o nome, atualiza em até 1 semana)
+/assets/img/*
+  Cache-Control: public, max-age=604800, stale-while-revalidate=86400
+
+/favicon.ico
+  Cache-Control: public, max-age=604800
+
+/manifest.webmanifest
+  Content-Type: application/manifest+json
+  Cache-Control: public, max-age=86400

@@ -1,0 +1,19 @@
+{
+  "name": "dna-vital",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Site Clínica DNA Vital Fios e Pele - estático, publicado no Cloudflare",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "dev:css": "tailwindcss -i src/tailwind.css -o assets/css/tailwind.css --watch",
+    "preview": "wrangler dev",
+    "deploy": "wrangler deploy"
+  },
+  "devDependencies": {
+    "tailwindcss": "3.4.5",
+    "wrangler": "^4"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
