@@ -1,7 +1,7 @@
 // Gera a pasta dist/ pronta para publicar no Cloudflare.
 //   1. Compila o Tailwind (src/tailwind.css -> assets/css/tailwind.css)
 //   2. Copia só os arquivos do site para dist/
-//   3. Adiciona ?v=<hash> nos CSS/JS do index.html (cache longo sem risco de versão velha)
+//   3. Adiciona ?v=<hash> nos CSS/JS e no manifest do index.html (cache longo sem risco de versão velha)
 import { execSync } from 'node:child_process';
 import { createHash } from 'node:crypto';
 import fs from 'node:fs';
@@ -44,7 +44,9 @@ for (const pagina of ['index.html', '404.html']) {
   const arq = path.join(dist, pagina);
   if (!fs.existsSync(arq)) continue;
   const html = fs.readFileSync(arq, 'utf8').replace(
-    /(href|src)="(\/?assets\/(?:css|js)\/[^"?#]+\.(?:css|js))"/g,
+    // o manifest também entra: o celular guarda o manifest em cache e, sem trocar a URL,
+    // o app instalado continua abrindo com as cores antigas na tela de abertura
+    /(href|src)="(\/?(?:assets\/(?:css|js)\/[^"?#]+\.(?:css|js)|manifest\.webmanifest))"/g,
     (m, attr, rel) => {
       const alvo = path.join(dist, rel.replace(/^\//, ''));
       return fs.existsSync(alvo) ? `${attr}="${rel}?v=${hash(alvo)}"` : m;
