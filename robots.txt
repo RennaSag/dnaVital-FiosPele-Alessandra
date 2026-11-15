@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://dnavital.usetap.com.br/sitemap.xml
+Sitemap: https://dnavitalcanaa.usetap.com.br/sitemap.xml

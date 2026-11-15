@@ -5,7 +5,7 @@
 /* 1. CONFIGURAÇÃO (tudo o que muda de cliente para cliente) */
 const WHATS_NUMERO = '5594991754846';
 const NOME_NEGOCIO = 'Clínica DNA Vital Fios e Pele';
-const SITE_URL = 'https://dnavital.usetap.com.br/';
+const SITE_URL = 'https://dnavitalcanaa.usetap.com.br/';
 // Celular/tablet: carrosséis usam a rolagem nativa (rápida, com a inércia do próprio aparelho)
 const TELA_TOQUE = window.matchMedia && window.matchMedia('(hover: none) and (pointer: coarse)').matches;
 

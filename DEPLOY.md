@@ -49,7 +49,7 @@ npm run deploy
 
 ## Domínio do site
 
-O endereço oficial previsto é `https://dnavital.usetap.com.br/`. Ele aparece em:
+O endereço oficial previsto é `https://dnavitalcanaa.usetap.com.br/`. Ele aparece em:
 
 - `SITE_URL` no `assets/js/main.js` (links compartilhados, QR Code, Whats Direct);
 - `og:url`, `og:image`, `canonical` e o JSON-LD (`url` e `image`) no `index.html`;
