@@ -811,7 +811,7 @@ window.addEventListener('resize', ajustarBotaoWhatsApp);
     const { dia, min } = agora();
     const h = HORARIOS[dia];
     if (h && min >= h[0] && min < h[1]) {
-      el.textContent = 'Aberto';
+      el.textContent = 'Aberto agora';
       prox.textContent = `Até ${fmt(h[1])}`;
       chip.className = 'hours-status is-open';
       chip.hidden = false;
@@ -823,7 +823,7 @@ window.addEventListener('resize', ajustarBotaoWhatsApp);
       let d = (dia + 1) % 7; while (!HORARIOS[d]) d = (d + 1) % 7;
       texto = `Abre ${d === (dia + 1) % 7 ? 'amanhã' : DIAS[d]} às ${fmt(HORARIOS[d][0])}`;
     }
-    el.textContent = 'Fechado';
+    el.textContent = 'Fechado agora';
     prox.textContent = texto;
     chip.className = 'hours-status is-closed';
     chip.hidden = false;

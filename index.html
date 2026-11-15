@@ -184,7 +184,7 @@
 <!-- =========================================================
      HERO
 ========================================================= -->
-<section id="inicio" class="hero-marinho relative pt-24 sm:pt-32 pb-32 sm:pb-40 rounded-b-[2.5rem] sm:rounded-b-[3.5rem] overflow-hidden text-white">
+<section id="inicio" class="hero-mobile hero-marinho relative pt-24 sm:pt-32 pb-28 sm:pb-36 px-4 sm:px-6 rounded-b-[2.5rem] sm:rounded-b-[3.5rem] overflow-hidden text-white">
   <!-- Fios decorativos (SVG estático, sem blur) -->
   <svg class="hero-fios" viewBox="0 0 1200 700" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
     <path d="M-40 520 C 180 380, 320 640, 560 470 S 900 300, 1240 420"/>
@@ -195,77 +195,94 @@
     <circle cx="1060" cy="170" r="3.5"/><circle cx="1085" cy="205" r="2.5"/><circle cx="1102" cy="240" r="2"/>
     <circle cx="150" cy="430" r="3.5"/><circle cx="125" cy="465" r="2.5"/><circle cx="108" cy="500" r="2"/>
   </svg>
-  <div class="relative max-w-4xl mx-auto px-4 sm:px-6 text-center">
 
-    <!-- STATUS + HORÁRIO EM TEMPO REAL -->
-    <div class="inline-flex max-w-full">
-      <div class="hours-bar border-spin rounded-full bg-white/5 px-2.5 py-2">
-        <span id="status-chip" class="hours-status" hidden><span class="hours-dot"></span><span id="status-horario"></span></span>
-        <span class="text-[11px] font-bold uppercase tracking-wide whitespace-nowrap text-white/85 pr-2"><i class="fa-regular fa-clock text-marinho-300 mr-1.5" aria-hidden="true"></i><span id="status-prox">Seg a Sex</span></span>
+  <div class="relative max-w-6xl w-full mx-auto grid lg:grid-cols-12 gap-12 lg:gap-10 items-center">
+
+    <!-- TEXTO -->
+    <div class="lg:col-span-7 text-center lg:text-left">
+
+      <!-- HORÁRIO + STATUS EM TEMPO REAL -->
+      <div id="horario-hero" class="hours-bar lg:justify-start mb-7 lg:mb-6" aria-label="Horário de funcionamento">
+        <span id="status-chip" class="hours-status is-closed"><span class="hours-dot"></span><span id="status-horario">Fechado agora</span></span>
+        <span class="hours-break" aria-hidden="true"></span>
+        <span class="hours-item"><i class="fa-regular fa-clock" aria-hidden="true"></i>Seg a Sex <strong>9h às 18h</strong></span>
+        <span class="hours-sep" aria-hidden="true"></span>
+        <span class="hours-item"><span id="status-prox">Atendimento com hora marcada</span></span>
+      </div>
+
+      <!-- TÍTULO COM SHINY TEXT -->
+      <h1 class="hero-titulo font-serif text-[clamp(2.75rem,13.2vw,3.5rem)] sm:text-6xl lg:text-[4rem] font-semibold leading-[1.02] mb-6 sm:mb-5">
+        <span class="shiny-text">Saúde capilar<br class="sm:hidden"> de verdade</span><br>
+        <span class="shiny-text-ouro italic font-medium">começa pela raiz.</span>
+      </h1>
+
+      <!-- CELULAR: DOIS DESTAQUES CURTOS -->
+      <div class="hero-destaques sm:hidden mb-8">
+        <div class="ornament max-w-[11rem] mx-auto mb-5"><i class="fa-solid fa-dna text-[9px]" aria-hidden="true"></i></div>
+        <p class="text-[15px] text-white font-semibold">Avaliação capilar por tricoscopia</p>
+        <p class="text-[13px] text-white/60 mt-1">Clínica em Canaã dos Carajás - PA</p>
+      </div>
+
+      <!-- COMPUTADOR/TABLET: PARÁGRAFO COMPLETO -->
+      <p class="hidden sm:block text-white/75 text-lg max-w-xl mx-auto lg:mx-0 mb-8 leading-relaxed">
+        Clínica capilar com avaliação por tricoscopia e tratamentos para <strong class="text-white font-semibold">queda de cabelo, alopecia, caspa e fios enfraquecidos</strong> em <strong class="text-white font-semibold whitespace-nowrap">Canaã dos Carajás - PA</strong>.
+      </p>
+
+      <!-- AÇÕES: AGENDAR, ACESSOS RÁPIDOS E AVALIAÇÃO -->
+      <div class="flex flex-col gap-3 max-w-xl mx-auto lg:mx-0">
+        <a href="https://api.whatsapp.com/send?phone=5594991754846&text=Ol%C3%A1%2C%20equipe%20DNA%20Vital%21%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20capilar."
+           target="_blank" rel="noopener noreferrer"
+           class="btn-claro-glow glare-hover w-full py-4 pl-4 pr-6 gap-3 text-[13px] sm:text-sm font-bold uppercase tracking-wider sm:tracking-widest whitespace-nowrap"
+           aria-label="Agendar avaliação pelo WhatsApp">
+          <span class="w-7 h-7 shrink-0 rounded-full bg-marinho-950 grid place-items-center shadow-inner"><i class="fa-brands fa-whatsapp text-emerald-400 text-[15px] leading-none block" aria-hidden="true"></i></span>
+          Agendar minha avaliação
+        </a>
+
+        <nav class="acessos" aria-label="Acessos rápidos">
+          <a href="https://www.instagram.com/clinicadnavitalfiosepele/" target="_blank" rel="noopener noreferrer" class="acesso" aria-label="Acessar Instagram da clínica">
+            <span class="acesso-icone acesso-icone--insta"><i class="fa-brands fa-instagram" aria-hidden="true"></i></span>
+            <span class="acesso-texto"><span class="acesso-titulo">Instagram</span><span class="acesso-sub">Siga a clínica</span></span>
+          </a>
+          <button type="button" onclick="openModal('pix-modal')" class="acesso" aria-label="Abrir opções de pagamento via PIX">
+            <span class="acesso-icone acesso-icone--pix"><i class="fa-brands fa-pix" aria-hidden="true"></i></span>
+            <span class="acesso-texto"><span class="acesso-titulo">Chave PIX</span><span class="acesso-sub">Copiar chave</span></span>
+          </button>
+          <a href="https://maps.app.goo.gl/59EiaP1gq6FsUDPNA" target="_blank" rel="noopener noreferrer" class="acesso" aria-label="Ver rota no Google Maps até a clínica">
+            <span class="acesso-icone acesso-icone--mapa"><i class="fa-solid fa-location-dot" aria-hidden="true"></i></span>
+            <span class="acesso-texto"><span class="acesso-titulo">Localização</span><span class="acesso-sub">Traçar rota</span></span>
+          </a>
+        </nav>
+
+        <a href="https://search.google.com/local/writereview?placeid=ChIJtRXWLwCd3ZIRDXRvXlDOC10" target="_blank" rel="noopener noreferrer"
+           class="avaliar-btn group" aria-label="Avaliar a clínica no Google">
+          <span class="avaliar-icone"><i class="fa-brands fa-google" aria-hidden="true"></i></span>
+          <span class="flex-1 min-w-0 text-left leading-tight">
+            <span class="block text-[13px] sm:text-sm font-bold text-white">Avalie<span class="hidden sm:inline"> a clínica</span> no Google</span>
+            <span class="block text-amber-300 text-xs tracking-[.2em] mt-0.5" aria-hidden="true">★★★★★</span>
+          </span>
+          <span class="avaliar-cta">Avaliar <i class="fa-solid fa-arrow-right transition-transform group-hover:translate-x-1" aria-hidden="true"></i></span>
+        </a>
       </div>
     </div>
 
-    <p class="hero-eyebrow mt-6"><span>Clínica Capilar</span> &middot; <span>Fios e Pele</span></p>
+    <a href="#profissional" class="hero-rolar sm:hidden" aria-label="Rolar para baixo">Descubra<i class="fa-solid fa-chevron-down" aria-hidden="true"></i></a>
 
-    <!-- TÍTULO COM SHINY TEXT -->
-    <h1 class="font-serif text-[clamp(2.75rem,13.2vw,3.5rem)] sm:text-6xl lg:text-7xl font-semibold leading-[1.02] mt-3">
-      <span class="shiny-text">Saúde capilar<br class="sm:hidden"> de verdade</span>
-      <span class="shiny-text-ouro italic font-medium mt-1">começa pela raiz.</span>
-    </h1>
-
-    <p class="mt-6 text-white/75 text-[15px] sm:text-lg max-w-2xl mx-auto leading-relaxed">
-      Clínica capilar com avaliação por tricoscopia e tratamentos para <strong class="text-white">queda de cabelo, alopecia, caspa e fios enfraquecidos</strong> em <strong class="text-white whitespace-nowrap">Canaã dos Carajás - PA</strong>.
-    </p>
-
-    <!-- BOTÕES DE AÇÃO PRINCIPAIS -->
-    <div class="max-w-lg mx-auto space-y-3 mt-9">
-
-      <a href="https://api.whatsapp.com/send?phone=5594991754846&text=Ol%C3%A1%2C%20equipe%20DNA%20Vital%21%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20capilar."
-         target="_blank" rel="noopener noreferrer"
-         class="btn-claro-glow glare-hover w-full py-4 text-sm uppercase tracking-wider font-bold"
-         aria-label="Agendar avaliação pelo WhatsApp">
-        <span class="w-7 h-7 rounded-full bg-marinho-950 flex items-center justify-center shrink-0"><i class="fa-brands fa-whatsapp text-emerald-400 text-base" aria-hidden="true"></i></span>
-        <span>Agendar Minha Avaliação</span>
-      </a>
-
-      <div class="grid grid-cols-3 gap-2.5">
-        <a href="https://www.instagram.com/clinicadnavitalfiosepele/" target="_blank" rel="noopener noreferrer"
-           class="glass-card glare-hover rounded-2xl py-3.5 px-1 flex flex-col items-center justify-center gap-1.5 text-center"
-           aria-label="Acessar Instagram da clínica">
-          <i class="fa-brands fa-instagram text-xl text-pink-300" aria-hidden="true"></i>
-          <span class="text-[12px] min-[380px]:text-[13px] font-bold text-white/90 truncate w-full">Instagram</span>
-        </a>
-
-        <button onclick="openModal('pix-modal')"
-                class="glass-card glare-hover rounded-2xl py-3.5 px-1 flex flex-col items-center justify-center gap-1.5 text-center"
-                aria-label="Abrir opções de pagamento via PIX">
-          <i class="fa-brands fa-pix text-xl text-teal-300" aria-hidden="true"></i>
-          <span class="text-[12px] min-[380px]:text-[13px] font-bold text-white/90 truncate w-full">Chave PIX</span>
-        </button>
-
-        <a href="https://maps.app.goo.gl/59EiaP1gq6FsUDPNA" target="_blank" rel="noopener noreferrer"
-           class="glass-card glare-hover rounded-2xl py-3.5 px-1 flex flex-col items-center justify-center gap-1.5 text-center"
-           aria-label="Ver rota no Google Maps até a clínica">
-          <i class="fa-solid fa-location-dot text-xl text-marinho-300" aria-hidden="true"></i>
-          <span class="text-[12px] min-[380px]:text-[13px] font-bold text-white/90 truncate w-full">Como Chegar</span>
-        </a>
+    <!-- FOTO (COMPUTADOR) -->
+    <div class="hidden lg:block lg:col-span-5 relative max-w-md w-full mx-auto">
+      <div class="hero-foto">
+        <img src="assets/img/alessandra-perfil.jpg" width="600" height="600" alt="Alessandra Souza, terapeuta capilar da Clínica DNA Vital" fetchpriority="high" decoding="async">
       </div>
-
-      <!-- AVALIAÇÃO GOOGLE -->
-      <a href="https://search.google.com/local/writereview?placeid=ChIJtRXWLwCd3ZIRDXRvXlDOC10" target="_blank" rel="noopener noreferrer"
-         class="glass-card glare-hover group w-full rounded-2xl p-3.5 flex items-center gap-3 text-left"
-         aria-label="Avaliar a clínica no Google">
-        <span class="w-11 h-11 rounded-2xl bg-white/10 border border-white/20 flex items-center justify-center shrink-0"><i class="fa-brands fa-google text-lg text-marinho-300" aria-hidden="true"></i></span>
-        <span class="flex-1 min-w-0">
-          <span class="block text-sm font-bold text-white">Avalie-nos no Google</span>
-          <span class="flex items-center gap-1 text-amber-400 text-xs mt-0.5">
-            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-            <span class="hidden sm:inline text-[11px] text-white/70 ml-1 font-semibold">Sua opinião faz a diferença</span>
-          </span>
+      <div class="hero-badge hero-badge--destaque">
+        <span class="w-10 h-10 rounded-xl bg-marinho-950 text-marinho-300 grid place-items-center shrink-0"><i class="fa-solid fa-microscope" aria-hidden="true"></i></span>
+        <span class="text-[10px] font-bold uppercase tracking-widest text-marinho-950/80 leading-tight">Avaliação por<br>tricoscopia</span>
+      </div>
+      <div class="hero-badge hero-badge--perfil">
+        <span class="w-11 h-11 rounded-full bg-marinho-400/20 border-2 border-marinho-300/70 text-marinho-200 grid place-items-center shrink-0"><i class="fa-solid fa-dna" aria-hidden="true"></i></span>
+        <span class="leading-tight">
+          <span class="block text-sm font-bold text-white">Alessandra Souza</span>
+          <span class="block text-[11px] text-marinho-300">Terapeuta capilar</span>
         </span>
-        <span class="text-[12px] font-bold uppercase tracking-wider text-marinho-300 inline-flex items-center gap-1">Avaliar <i class="fa-solid fa-arrow-right transition-transform group-hover:translate-x-1" aria-hidden="true"></i></span>
-      </a>
-
+      </div>
     </div>
   </div>
 </section>

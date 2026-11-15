@@ -484,14 +484,97 @@ a { text-decoration: none !important; color: inherit; }
 .hero-fios .hero-fios__fino { stroke: #8EBEDF; stroke-width: 1; opacity: .7; }
 .hero-fios circle { fill: #8EBEDF; }
 
-/* Hero: linha de apoio acima do título, com traços dos dois lados */
-.hero-eyebrow {
-  display: flex; align-items: center; justify-content: center; gap: .55rem;
-  font-size: 10.5px; font-weight: 600; letter-spacing: .32em; text-transform: uppercase; color: #A9D0EA;
+/* =========================================================
+   HERO NO PADRÃO MARA COSTA (texto + foto, horário, acessos e avaliação)
+   ========================================================= */
+.hours-bar { width: 100%; max-width: 100%; gap: .45rem .7rem; }
+.hours-item { font-size: 11px; color: rgba(255, 255, 255, .65); letter-spacing: .04em; display: inline-flex; align-items: center; gap: .35rem; }
+.hours-item strong { color: #A9D0EA; font-weight: 700; }
+.hours-item i { color: #8EBEDF; }
+.hours-sep { width: 1px; height: 12px; background: rgba(142, 190, 223, .35); }
+.hours-break { display: none; }
+/* Celular: status numa linha, horários na linha de baixo */
+@media (max-width: 639px) {
+  .hours-bar { gap: .3rem .6rem; }
+  .hours-break { display: block; flex-basis: 100%; height: 0; }
+  .hours-sep { height: 10px; }
 }
-.hero-eyebrow::before, .hero-eyebrow::after { content: ''; width: 28px; height: 1px; }
-.hero-eyebrow::before { background: linear-gradient(90deg, transparent, #599FCB); }
-.hero-eyebrow::after { background: linear-gradient(90deg, #599FCB, transparent); }
+
+/* Título: quebra as linhas de forma equilibrada */
+.hero-titulo .shiny-text-ouro { text-wrap: balance; }
+
+/* Divisor ornamental */
+.ornament { display: flex; align-items: center; gap: .75rem; color: rgba(142, 190, 223, .75); }
+.ornament::before, .ornament::after { content: ''; height: 1px; flex: 1; background: linear-gradient(90deg, transparent, currentColor, transparent); }
+
+/* Celular: o hero ocupa exatamente a primeira tela (os 5rem extras ficam atrás do card #profissional, que sobe -mt-20) */
+@media (max-width: 639px) {
+  .hero-mobile { min-height: calc(100svh + 5rem); display: flex; align-items: center; }
+  .hero-rolar { position: absolute; left: 50%; bottom: 5.6rem; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center; gap: .2rem;
+    font-size: 9px; font-weight: 700; letter-spacing: .3em; text-transform: uppercase; color: rgba(255, 255, 255, .4); }
+  .hero-rolar i { font-size: 11px; color: #8EBEDF; animation: rolarHint 1.8s ease-in-out infinite; }
+}
+@media (max-width: 639px) and (max-height: 900px) { .hero-rolar { display: none; } }
+/* Celular: tudo do hero (horário até a avaliação) cabe na primeira tela.
+   Espaços e título acompanham a altura visível (svh), descontando a barra do navegador. */
+@media (max-width: 639px) {
+  section.hero-mobile { padding-top: 5rem; }
+  .hero-mobile .hours-bar { margin-bottom: clamp(.9rem, 3svh, 1.75rem); }
+  .hero-mobile .hero-titulo { font-size: clamp(2.3rem, min(13.2vw, 6.6svh), 3.5rem); margin-bottom: clamp(.75rem, 2.5svh, 1.5rem); }
+  .hero-mobile .hero-destaques { margin-bottom: clamp(1rem, 3.5svh, 2rem); }
+  .hero-mobile .hero-destaques .ornament { margin-bottom: clamp(.6rem, 2svh, 1.25rem); }
+  .hero-mobile .btn-claro-glow { padding-top: .875rem; padding-bottom: .875rem; }
+  .hero-mobile .acesso { padding: .65rem .25rem .6rem; gap: .35rem; }
+  .hero-mobile .avaliar-btn { padding-top: .65rem; padding-bottom: .65rem; }
+}
+/* Telas baixas: some o divisor; muito baixas: somem também os destaques */
+@media (max-width: 639px) and (max-height: 720px) { .hero-mobile .hero-destaques .ornament { display: none; } }
+@media (max-width: 639px) and (max-height: 600px) { .hero-mobile .hero-destaques { display: none; } }
+@keyframes rolarHint { 0%, 100% { transform: translateY(0); opacity: .6; } 50% { transform: translateY(4px); opacity: 1; } }
+
+/* Foto e selos flutuantes */
+.hero-foto { position: relative; border-radius: 2rem; overflow: hidden; aspect-ratio: 4 / 5; border: 1px solid rgba(142, 190, 223, .45);
+  box-shadow: 0 40px 80px -30px rgba(0, 0, 0, .8), 0 0 0 8px rgba(142, 190, 223, .06); }
+.hero-foto img { width: 100%; height: 100%; object-fit: cover; object-position: center top; }
+.hero-foto::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 55%, rgba(1, 19, 34, .55)); pointer-events: none; }
+.hero-badge { position: absolute; display: flex; align-items: center; gap: .75rem; border-radius: 1.25rem; padding: .85rem 1.1rem; box-shadow: 0 20px 40px -14px rgba(0, 0, 0, .6); }
+.hero-badge--destaque { top: 1.5rem; left: -1.25rem; background: linear-gradient(135deg, #FFFFFF 0%, #DCEBF5 45%, #BCD8EC 100%); border: 1px solid rgba(255, 255, 255, .6); }
+.hero-badge--perfil { bottom: 1.5rem; right: -1.25rem; background: rgba(1, 19, 34, .82); border: 1px solid rgba(142, 190, 223, .4); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); }
+
+/* Acessos rápidos: Instagram, PIX, Localização (uma barra só, 3 partes iguais) */
+.acessos { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-radius: 1.25rem; overflow: hidden;
+  background: rgba(255, 255, 255, .045); border: 1px solid rgba(142, 190, 223, .35);
+  -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); box-shadow: 0 18px 40px -24px rgba(0, 0, 0, .9); }
+.acesso { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: .45rem; min-width: 0;
+  padding: .8rem .25rem .75rem; text-align: center; transition: background .25s; }
+.acesso + .acesso { border-left: 1px solid rgba(142, 190, 223, .2); }
+.acesso:hover { background: rgba(142, 190, 223, .12); }
+.acesso:focus-visible { outline: 2px solid #8EBEDF; outline-offset: -2px; }
+.acesso-icone { width: 2.5rem; height: 2.5rem; flex-shrink: 0; border-radius: .85rem; display: flex; align-items: center; justify-content: center; font-size: 1.15rem; color: #fff;
+  box-shadow: 0 8px 18px -8px rgba(0, 0, 0, .7), inset 0 1px 0 rgba(255, 255, 255, .25); transition: transform .25s; }
+.acesso:hover .acesso-icone { transform: scale(1.08); }
+.acesso-icone--insta { background: linear-gradient(45deg, #F9A825 0%, #E1306C 50%, #833AB4 100%); }
+.acesso-icone--pix { background: linear-gradient(135deg, #4DB6AC, #00897B); }
+.acesso-icone--mapa { background: linear-gradient(135deg, #DCEBF5 0%, #8EBEDF 45%, #599FCB 100%); color: #011322; }
+.acesso-texto { display: flex; flex-direction: column; min-width: 0; line-height: 1.25; }
+.acesso-titulo { font-size: 11px; font-weight: 700; color: #fff; white-space: nowrap; }
+.acesso-sub { display: none; font-size: 11px; color: rgba(255, 255, 255, .55); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+@media (min-width: 640px) {
+  .acesso { flex-direction: row; justify-content: flex-start; gap: .7rem; padding: .85rem .9rem; text-align: left; }
+  .acesso-titulo { font-size: 13px; }
+  .acesso-sub { display: block; }
+}
+
+/* Botão largo de avaliação no Google */
+.avaliar-btn { display: flex; align-items: center; gap: .85rem; width: 100%; padding: .8rem .9rem .8rem .8rem; border-radius: 1.25rem;
+  background: linear-gradient(135deg, rgba(251, 191, 36, .14), rgba(142, 190, 223, .06)); border: 1px solid rgba(252, 211, 77, .4);
+  box-shadow: 0 18px 40px -24px rgba(0, 0, 0, .9), inset 0 1px 0 rgba(255, 255, 255, .08); transition: border-color .25s, background .25s, transform .25s; }
+.avaliar-btn:hover { border-color: rgba(252, 211, 77, .8); background: linear-gradient(135deg, rgba(251, 191, 36, .22), rgba(142, 190, 223, .1)); transform: translateY(-2px); }
+.avaliar-btn:focus-visible { outline: 2px solid #FCD34D; outline-offset: 3px; }
+.avaliar-icone { width: 2.6rem; height: 2.6rem; flex-shrink: 0; border-radius: .85rem; display: flex; align-items: center; justify-content: center;
+  background: #fff; color: #4285F4; font-size: 1.15rem; box-shadow: 0 8px 18px -8px rgba(0, 0, 0, .7); }
+.avaliar-cta { flex-shrink: 0; display: inline-flex; align-items: center; gap: .4rem; padding: .55rem .95rem; border-radius: 9999px;
+  background: linear-gradient(135deg, #FFFFFF 0%, #DCEBF5 45%, #BCD8EC 100%); color: #01243F; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .1em; }
 
 /* Card da terapeuta: faixa de cor no topo e anel em degradê na foto */
 .card-acento::after {
