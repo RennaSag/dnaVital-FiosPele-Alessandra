@@ -831,3 +831,14 @@ window.addEventListener('resize', ajustarBotaoWhatsApp);
   atualizar();
   setInterval(atualizar, 60000);
 })();
+
+// FAQ: abrir uma pergunta fecha as outras
+(function faqAcordeao() {
+  const itens = document.querySelectorAll('details.faq-item');
+  itens.forEach((item) => {
+    item.addEventListener('toggle', () => {
+      if (!item.open) return;
+      itens.forEach((outro) => { if (outro !== item) outro.open = false; });
+    });
+  });
+})();
