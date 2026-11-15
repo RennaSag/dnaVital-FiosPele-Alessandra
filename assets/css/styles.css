@@ -588,14 +588,6 @@ a { text-decoration: none !important; color: inherit; }
 }
 .foto-anel > div { border: 3px solid #FFFFFF; }
 
-/* Ornamento abaixo dos títulos de seção (traço + gota + traço) */
-.orn {
-  display: block; width: 88px; height: 10px; margin: .7rem auto 0;
-  background:
-    radial-gradient(circle, #599FCB 0 3px, transparent 3.5px) center / 10px 10px no-repeat,
-    linear-gradient(90deg, transparent, #8EBEDF 25%, #8EBEDF 40%, transparent 42%, transparent 58%, #8EBEDF 60%, #8EBEDF 75%, transparent) center / 100% 1.5px no-repeat;
-}
-
 /* Resumo de autoridade: divisórias finas no computador */
 @media (min-width: 1024px) {
   .faixa-autoridade > div:not(:first-child) { border-left: 1px solid rgba(191, 213, 230, .8); border-radius: 0 1rem 1rem 0; padding-left: 1rem; }
