@@ -681,7 +681,7 @@ let deferredPrompt = null;
     description: 'Clínica Capilar • Terapia Capilar • Canaã dos Carajás - PA',
     start_url: urlSite(),
     display: 'standalone',
-    background_color: '#EAF2F8',
+    background_color: '#012C4C',
     theme_color: '#012C4C',
     icons: [
       { src: abs('assets/img/icon-192.png'), sizes: '192x192', type: 'image/png' },
