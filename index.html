@@ -47,7 +47,7 @@
     "@context": "https://schema.org",
     "@type": "HealthAndBeautyBusiness",
     "name": "Clínica DNA Vital Fios e Pele",
-    "description": "Clínica capilar: avaliação por tricoscopia e tratamentos para queda de cabelo, alopecia areata, caspa e fios enfraquecidos.",
+    "description": "Clínica capilar: avaliação por tricoscopia, terapia capilar, ozonioterapia, escova terapêutica, laserterapia, ILIBterapia, reposição de massa, coloração e tratamento de fios.",
     "url": "https://dnavitalcanaa.usetap.com.br/",
     "image": "https://dnavitalcanaa.usetap.com.br/assets/img/logo-fundo.jpg",
     "telephone": "+5594991754846",
@@ -60,7 +60,7 @@
       "addressCountry": "BR"
     },
     "geo": { "@type": "GeoCoordinates", "latitude": -6.5368002, "longitude": -49.8514224 },
-    "openingHours": "Mo-Fr 09:00-18:00",
+    "openingHours": ["Mo-Fr 09:00-18:00", "Sa 09:00-12:00"],
     "sameAs": ["https://www.instagram.com/clinicadnavitalfiosepele/"]
   }
   </script>
@@ -103,6 +103,14 @@
       },
       {
         "@type": "Question",
+        "name": "Quais procedimentos a clínica oferece?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Terapia Capilar, Ozonioterapia, Escova Terapêutica, Laserterapia, ILIBterapia, Reposição de Massa, Coloração e Tratamento de Fios. O procedimento indicado para você é definido na avaliação capilar."
+        }
+      },
+      {
+        "@type": "Question",
         "name": "O que é a Escova Ozonizada?",
         "acceptedAnswer": {
           "@type": "Answer",
@@ -114,7 +122,7 @@
         "name": "Como faço para agendar?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Pelo WhatsApp (94) 99175-4846, de segunda a sexta, das 9h às 18h. A clínica fica na Rua Angelim, 192, Nova Canaã, em Canaã dos Carajás - PA."
+          "text": "Pelo WhatsApp (94) 99175-4846. Atendemos de segunda a sexta, das 9h às 18h, e aos sábados, das 9h às 12h. A clínica fica na Rua Angelim, 192, Nova Canaã, em Canaã dos Carajás - PA."
         }
       }
     ]
@@ -209,7 +217,7 @@
       <div id="horario-hero" class="hours-bar lg:justify-start mb-7 lg:mb-6" aria-label="Horário de funcionamento">
         <span id="status-chip" class="hours-status" hidden><span class="hours-dot"></span><span id="status-horario"></span></span>
         <span class="hours-break" aria-hidden="true"></span>
-        <span class="hours-item"><i class="fa-regular fa-clock" aria-hidden="true"></i>Seg a Sex <strong>9h às 18h</strong></span>
+        <span class="hours-item"><i class="fa-regular fa-clock" aria-hidden="true"></i>Seg a Sex <strong>9h às 18h</strong> &middot; Sáb <strong>9h às 12h</strong></span>
         <span class="hours-sep" aria-hidden="true"></span>
         <span class="hours-item"><span id="status-prox">Atendimento com hora marcada</span></span>
       </div>
@@ -228,7 +236,7 @@
 
       <!-- COMPUTADOR/TABLET: PARÁGRAFO COMPLETO -->
       <p class="hidden sm:block text-white/75 text-lg max-w-xl mx-auto lg:mx-0 mb-8 leading-relaxed">
-        Clínica capilar com avaliação por tricoscopia e tratamentos para <strong class="text-white font-semibold">queda de cabelo, alopecia, caspa e fios enfraquecidos</strong> em <strong class="text-white font-semibold whitespace-nowrap">Canaã dos Carajás - PA</strong>.
+        Clínica capilar com avaliação por tricoscopia, <strong class="text-white font-semibold">terapia capilar, ozonioterapia, laserterapia e tratamento de fios</strong> em <strong class="text-white font-semibold whitespace-nowrap">Canaã dos Carajás - PA</strong>.
       </p>
 
       <!-- AÇÕES: AGENDAR, ACESSOS RÁPIDOS E AVALIAÇÃO -->
@@ -273,7 +281,7 @@
     <!-- FOTO (COMPUTADOR) -->
     <div class="hidden lg:block lg:col-span-5 relative max-w-md w-full mx-auto">
       <div class="hero-foto">
-        <img src="assets/img/alessandra-perfil.jpg" width="600" height="600" alt="Alessandra Souza, terapeuta capilar da Clínica DNA Vital" fetchpriority="high" decoding="async">
+        <img src="assets/img/alessandra-retrato.jpg" width="800" height="1000" alt="Alessandra Souza, terapeuta capilar da Clínica DNA Vital" fetchpriority="high" decoding="async">
       </div>
       <div class="hero-badge hero-badge--destaque">
         <span class="w-10 h-10 rounded-xl bg-marinho-950 text-marinho-300 grid place-items-center shrink-0"><i class="fa-solid fa-microscope" aria-hidden="true"></i></span>
@@ -304,7 +312,7 @@
           <div class="relative mb-5">
             <div class="foto-anel w-40 h-40 sm:w-48 sm:h-48">
               <div class="w-full h-full rounded-full overflow-hidden bg-marinho-50">
-                <img src="assets/img/alessandra-perfil.jpg" alt="Alessandra Souza, terapeuta capilar" width="600" height="600"
+                <img src="assets/img/alessandra-perfil-redondo.jpg" alt="Alessandra Souza, terapeuta capilar" width="600" height="600"
                      class="w-full h-full object-cover object-center hover:scale-105 transition-transform duration-500"
                      loading="lazy" decoding="async">
               </div>
@@ -315,7 +323,7 @@
           </div>
           <h3 class="font-serif font-bold text-2xl text-marinho leading-tight">Alessandra Souza</h3>
           <p class="text-[10.5px] uppercase tracking-widest text-celeste font-bold mt-1">Avaliação &bull; Tratamento Capilar</p>
-          <span class="text-[11px] text-textoSuave mt-0.5">Clínica Capilar DNA Vital Fios e Pele</span>
+          <span class="text-[11px] text-textoSuave mt-0.5">Formada pela DNA Vital, Florianópolis (SC)</span>
         </div>
 
         <div class="md:col-span-8 space-y-3.5 text-[15px] sm:text-sm text-textoSuave leading-relaxed">
@@ -350,18 +358,18 @@
           <i class="fa-solid fa-award"></i>
         </div>
         <div class="min-w-0 flex-1">
-          <p class="font-bold text-[11px] sm:text-xs text-textoEscuro uppercase">Anos de Carreira</p>
-          <p class="text-[11px] cs-inline">Coming soon</p>
+          <p class="font-bold text-[11px] sm:text-xs text-textoEscuro uppercase">Na Beleza</p>
+          <p class="text-[11px] text-textoSuave">Desde 2013</p>
         </div>
       </div>
 
       <div class="glare-hover rounded-2xl flex items-center gap-3 p-2 min-w-0">
         <div class="w-10 h-10 sm:w-11 sm:h-11 rounded-2xl bg-celeste-claro text-celeste flex items-center justify-center text-base sm:text-lg shrink-0">
-          <i class="fa-solid fa-house-medical"></i>
+          <i class="fa-solid fa-graduation-cap"></i>
         </div>
         <div class="min-w-0 flex-1">
-          <p class="font-bold text-[11px] sm:text-xs text-textoEscuro uppercase">Anos de Clínica</p>
-          <p class="text-[11px] cs-inline">Coming soon</p>
+          <p class="font-bold text-[11px] sm:text-xs text-textoEscuro uppercase">Terapeuta Capilar</p>
+          <p class="text-[11px] text-textoSuave">Desde 2020</p>
         </div>
       </div>
 
@@ -417,6 +425,51 @@
           </a>
         </div>
       </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- =========================================================
+     TRAJETÓRIA DA TERAPEUTA (texto enviado pela cliente)
+========================================================= -->
+<section id="trajetoria" class="pt-12 pb-10 sm:pt-14 sm:pb-12 px-4 sm:px-6 max-w-6xl mx-auto border-t border-nevoa-escura/50">
+  <div class="grid lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+
+    <div class="lg:col-span-5 lg:sticky lg:top-28">
+      <figure class="trajetoria-foto">
+        <img src="assets/img/alessandra-tricoscopia.jpg" width="1200" height="801" data-lightbox="Alessandra Souza na avaliação capilar"
+             alt="Alessandra Souza fazendo anotações ao lado do microscópio na Clínica DNA Vital" loading="lazy" decoding="async">
+      </figure>
+      <ol class="marcos mt-5" aria-label="Linha do tempo">
+        <li class="marco"><span class="marco__ano">2013</span><span class="marco__txt">Início da trajetória na área da beleza</span></li>
+        <li class="marco"><span class="marco__ano">2020</span><span class="marco__txt">Formação em Terapia Capilar no complexo DNA Vital, Florianópolis (SC)</span></li>
+        <li class="marco"><span class="marco__ano">Hoje</span><span class="marco__txt">À frente da Clínica Capilar DNA Vital Fios e Pele</span></li>
+      </ol>
+    </div>
+
+    <div class="lg:col-span-7 text-[15px] sm:text-sm text-textoSuave leading-relaxed space-y-3.5">
+      <span class="text-xs uppercase tracking-widest text-celeste font-bold block">Minha Trajetória</span>
+      <h2 class="font-serif font-bold text-3xl sm:text-4xl text-marinho leading-tight">
+        Uma trajetória construída com conhecimento, propósito e dedicação à saúde capilar.
+      </h2>
+      <p>Minha trajetória na área da beleza começou em 2013, e, ao longo dos anos, fui desenvolvendo um interesse cada vez maior em compreender o cabelo além da sua aparência.</p>
+      <p>Em 2020, decidi aprofundar meus conhecimentos e me especializar em Terapia Capilar, realizando minha formação no complexo DNA Vital, em Florianópolis (SC). Essa experiência ampliou minha visão profissional e me apresentou uma nova forma de trabalhar com os cabelos: através da compreensão da fisiologia dos fios, da saúde do couro cabeludo e da importância de um cuidado individualizado.</p>
+      <details class="trajetoria-mais">
+        <summary><span class="trajetoria-mais__abrir">Continuar lendo</span><span class="trajetoria-mais__fechar">Mostrar menos</span> <i class="fa-solid fa-chevron-down" aria-hidden="true"></i></summary>
+        <div class="space-y-3.5 pt-3.5">
+          <p>Desde então, venho construindo minha experiência por meio de estudos, prática profissional e aperfeiçoamento contínuo. Ao longo dessa caminhada, tive a oportunidade de atuar em diferentes espaços e ampliar minha experiência até concretizar o projeto de ter minha própria clínica.</p>
+          <p>Hoje, à frente da Clínica Capilar DNA Vital Fios e Pele, meu propósito é oferecer um atendimento que vá além dos cuidados estéticos, valorizando a saúde capilar, a qualidade dos fios e o bem-estar de cada pessoa.</p>
+          <p>Acredito que cada cabelo possui características e necessidades próprias. Por isso, meu trabalho é direcionado à avaliação, compreensão e escolha de cuidados adequados para cada necessidade, sempre respeitando os limites da atuação da Terapia Capilar e buscando integração com outros profissionais da saúde quando necessário.</p>
+          <p>Meu objetivo é continuar evoluindo, levando conhecimento, cuidado e soluções personalizadas, contribuindo para que cada pessoa tenha cabelos mais saudáveis, bonitos e com sua qualidade natural preservada.</p>
+        </div>
+      </details>
+      <blockquote class="relative rounded-2xl bg-marinho-50 border-l-4 border-marinho px-5 py-4">
+        <p class="font-serif italic text-lg sm:text-xl text-marinho leading-snug">
+          "Mais do que cuidar dos fios, meu propósito é transformar a maneira como as pessoas compreendem e cuidam da saúde capilar."
+        </p>
+        <span class="block mt-2 text-[11px] uppercase tracking-widest font-bold text-celeste">Alessandra Souza</span>
+      </blockquote>
     </div>
 
   </div>
@@ -491,15 +544,16 @@
             <div class="w-11 h-11 rounded-2xl bg-celeste-claro text-celeste flex items-center justify-center text-lg shrink-0">
               <i class="fa-solid fa-seedling"></i>
             </div>
-            <h3 class="font-serif font-bold text-xl text-marinho leading-tight">Terapia Capilar para Queda</h3>
+            <h3 class="font-serif font-bold text-xl text-marinho leading-tight">Terapia Capilar</h3>
           </div>
           <span class="text-[9px] font-bold uppercase tracking-wider bg-nevoa-escura text-marinho-900 px-2.5 py-0.5 rounded-full shrink-0">Tratamento</span>
         </div>
         <p class="text-textoSuave text-[15px] sm:text-sm leading-relaxed mb-4">
-          Protocolos personalizados para reduzir a queda, fortalecer os fios e estimular um crescimento saudável, com avaliação, acompanhamento e constância.
+          Protocolos personalizados para as alterações do couro cabeludo e a queda de cabelo, inclusive nas fases de mudança hormonal, menopausa e emagrecimento, com avaliação, acompanhamento e constância.
         </p>
-        <a href="https://api.whatsapp.com/send?phone=5594991754846&text=Ol%C3%A1%2C%20equipe%20DNA%20Vital%21%20Vim%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20a%20Terapia%20Capilar%20para%20queda%20de%20cabelo." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-bold text-marinho bg-marinho-50 hover:bg-marinho-100 px-4 py-2 rounded-full border border-nevoa-escura transition-colors">
-          <span>Tratar a queda</span> <i class="fa-solid fa-arrow-right text-[9px]"></i>
+        <ul class="indicacoes" aria-label="Indicações da terapia capilar"><li>Queda</li><li>Calvície</li><li>Alopecia areata</li><li>Caspa</li><li>Dermatite</li><li>Seborreia</li><li>Psoríase</li><li>Oleosidade</li></ul>
+        <a href="https://api.whatsapp.com/send?phone=5594991754846&text=Ol%C3%A1%2C%20equipe%20DNA%20Vital%21%20Vim%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20a%20Terapia%20Capilar." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-bold text-marinho bg-marinho-50 hover:bg-marinho-100 px-4 py-2 rounded-full border border-nevoa-escura transition-colors">
+          <span>Saber mais</span> <i class="fa-solid fa-arrow-right text-[9px]"></i>
         </a>
       </div>
 
@@ -508,17 +562,17 @@
         <div class="flex flex-wrap items-center justify-between gap-2 mb-2.5 pb-2.5 border-b border-nevoa-escura">
           <div class="flex items-center gap-3 min-w-0">
             <div class="w-11 h-11 rounded-2xl bg-marinho-100 text-marinho flex items-center justify-center text-lg shrink-0">
-              <i class="fa-regular fa-circle-dot"></i>
+              <i class="fa-solid fa-wind"></i>
             </div>
-            <h3 class="font-serif font-bold text-xl text-marinho leading-tight">Alopecia Areata</h3>
+            <h3 class="font-serif font-bold text-xl text-marinho leading-tight">Ozonioterapia</h3>
           </div>
-          <span class="text-[9px] font-bold uppercase tracking-wider bg-marinho-100 text-marinho px-2.5 py-0.5 rounded-full shrink-0">Especialidade</span>
+          <span class="text-[9px] font-bold uppercase tracking-wider bg-marinho-100 text-marinho px-2.5 py-0.5 rounded-full shrink-0">Ozônio</span>
         </div>
         <p class="text-textoSuave text-[15px] sm:text-sm leading-relaxed mb-4">
-          Falhas no couro cabeludo exigem estratégia e acompanhamento. Tratamos a alopecia areata considerando os fatores inflamatórios e imunológicos envolvidos.
+          O ozônio aplicado no couro cabeludo como aliado do tratamento capilar, ajudando a purificar e equilibrar a base de onde os fios nascem.
         </p>
-        <a href="https://api.whatsapp.com/send?phone=5594991754846&text=Ol%C3%A1%2C%20equipe%20DNA%20Vital%21%20Vim%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20o%20tratamento%20para%20Alopecia%20Areata." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-bold text-marinho bg-marinho-50 hover:bg-marinho-100 px-4 py-2 rounded-full border border-nevoa-escura transition-colors">
-          <span>Saber mais sobre alopecia</span> <i class="fa-solid fa-arrow-right text-[9px]"></i>
+        <a href="https://api.whatsapp.com/send?phone=5594991754846&text=Ol%C3%A1%2C%20equipe%20DNA%20Vital%21%20Vim%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20a%20Ozonioterapia." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-bold text-marinho bg-marinho-50 hover:bg-marinho-100 px-4 py-2 rounded-full border border-nevoa-escura transition-colors">
+          <span>Conhecer a Ozonioterapia</span> <i class="fa-solid fa-arrow-right text-[9px]"></i>
         </a>
       </div>
 
@@ -529,15 +583,15 @@
             <div class="w-11 h-11 rounded-2xl bg-celeste-claro text-celeste flex items-center justify-center text-lg shrink-0">
               <i class="fa-solid fa-spa"></i>
             </div>
-            <h3 class="font-serif font-bold text-xl text-marinho leading-tight">Caspa e Couro Cabeludo</h3>
+            <h3 class="font-serif font-bold text-xl text-marinho leading-tight">Escova Terapêutica</h3>
           </div>
-          <span class="text-[9px] font-bold uppercase tracking-wider bg-nevoa-escura text-marinho-900 px-2.5 py-0.5 rounded-full shrink-0">Couro Cabeludo</span>
+          <span class="text-[9px] font-bold uppercase tracking-wider bg-marinho text-white px-2.5 py-0.5 rounded-full shrink-0">Escova</span>
         </div>
         <p class="text-textoSuave text-[15px] sm:text-sm leading-relaxed mb-4">
-          Cuidado para a caspa e para as alterações do couro cabeludo, devolvendo equilíbrio à base de onde os fios nascem.
+          Mais que uma escova, um tratamento: cuida do couro cabeludo e dos fios ao mesmo tempo, como na Escova Ozonizada, deixando o cabelo mais leve, brilhante e com movimento natural.
         </p>
-        <a href="https://api.whatsapp.com/send?phone=5594991754846&text=Ol%C3%A1%2C%20equipe%20DNA%20Vital%21%20Vim%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20o%20tratamento%20para%20caspa%20e%20couro%20cabeludo." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-bold text-marinho bg-marinho-50 hover:bg-marinho-100 px-4 py-2 rounded-full border border-nevoa-escura transition-colors">
-          <span>Cuidar do couro cabeludo</span> <i class="fa-solid fa-arrow-right text-[9px]"></i>
+        <a href="https://api.whatsapp.com/send?phone=5594991754846&text=Ol%C3%A1%2C%20equipe%20DNA%20Vital%21%20Vim%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20a%20Escova%20Terap%C3%AAutica." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-bold text-marinho bg-marinho-50 hover:bg-marinho-100 px-4 py-2 rounded-full border border-nevoa-escura transition-colors">
+          <span>Agendar minha escova</span> <i class="fa-solid fa-arrow-right text-[9px]"></i>
         </a>
       </div>
 
@@ -546,17 +600,17 @@
         <div class="flex flex-wrap items-center justify-between gap-2 mb-2.5 pb-2.5 border-b border-nevoa-escura">
           <div class="flex items-center gap-3 min-w-0">
             <div class="w-11 h-11 rounded-2xl bg-marinho-100 text-marinho flex items-center justify-center text-lg shrink-0">
-              <i class="fa-solid fa-dna"></i>
+              <i class="fa-solid fa-wand-magic-sparkles"></i>
             </div>
-            <h3 class="font-serif font-bold text-xl text-marinho leading-tight">Fortalecimento dos Fios</h3>
+            <h3 class="font-serif font-bold text-xl text-marinho leading-tight">Laserterapia</h3>
           </div>
-          <span class="text-[9px] font-bold uppercase tracking-wider bg-marinho text-white px-2.5 py-0.5 rounded-full shrink-0">Fios</span>
+          <span class="text-[9px] font-bold uppercase tracking-wider bg-nevoa-escura text-marinho-900 px-2.5 py-0.5 rounded-full shrink-0">Laser</span>
         </div>
         <p class="text-textoSuave text-[15px] sm:text-sm leading-relaxed mb-4">
-          Para fios enfraquecidos, finos ou sem vida: tratamentos que trabalham a força, a densidade e a vitalidade do cabelo.
+          Laser de baixa potência aplicado no couro cabeludo, um recurso que estimula a região e potencializa os resultados do tratamento capilar.
         </p>
-        <a href="https://api.whatsapp.com/send?phone=5594991754846&text=Ol%C3%A1%2C%20equipe%20DNA%20Vital%21%20Vim%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20o%20fortalecimento%20dos%20fios." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-bold text-marinho bg-marinho-50 hover:bg-marinho-100 px-4 py-2 rounded-full border border-nevoa-escura transition-colors">
-          <span>Fortalecer meus fios</span> <i class="fa-solid fa-arrow-right text-[9px]"></i>
+        <a href="https://api.whatsapp.com/send?phone=5594991754846&text=Ol%C3%A1%2C%20equipe%20DNA%20Vital%21%20Vim%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20a%20Laserterapia." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-bold text-marinho bg-marinho-50 hover:bg-marinho-100 px-4 py-2 rounded-full border border-nevoa-escura transition-colors">
+          <span>Conhecer a Laserterapia</span> <i class="fa-solid fa-arrow-right text-[9px]"></i>
         </a>
       </div>
 
@@ -565,17 +619,17 @@
         <div class="flex flex-wrap items-center justify-between gap-2 mb-2.5 pb-2.5 border-b border-nevoa-escura">
           <div class="flex items-center gap-3 min-w-0">
             <div class="w-11 h-11 rounded-2xl bg-celeste-claro text-celeste flex items-center justify-center text-lg shrink-0">
-              <i class="fa-solid fa-venus"></i>
+              <i class="fa-solid fa-heart-pulse"></i>
             </div>
-            <h3 class="font-serif font-bold text-xl text-marinho leading-tight">Queda Hormonal e Menopausa</h3>
+            <h3 class="font-serif font-bold text-xl text-marinho leading-tight">ILIBterapia</h3>
           </div>
-          <span class="text-[9px] font-bold uppercase tracking-wider bg-marinho-100 text-marinho px-2.5 py-0.5 rounded-full shrink-0">Hormonal</span>
+          <span class="text-[9px] font-bold uppercase tracking-wider bg-marinho-100 text-marinho px-2.5 py-0.5 rounded-full shrink-0">Bem-estar</span>
         </div>
         <p class="text-textoSuave text-[15px] sm:text-sm leading-relaxed mb-4">
-          A menopausa pode alterar o comportamento dos fios antes mesmo de a mulher perceber: as mudanças hormonais afetam densidade, força e crescimento capilar.
+          Laser de baixa intensidade aplicado no pulso, de forma não invasiva, como cuidado complementar que olha para o organismo como um todo.
         </p>
-        <a href="https://api.whatsapp.com/send?phone=5594991754846&text=Ol%C3%A1%2C%20equipe%20DNA%20Vital%21%20Vim%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20o%20tratamento%20para%20queda%20hormonal%20e%20na%20menopausa." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-bold text-marinho bg-marinho-50 hover:bg-marinho-100 px-4 py-2 rounded-full border border-nevoa-escura transition-colors">
-          <span>Saber mais</span> <i class="fa-solid fa-arrow-right text-[9px]"></i>
+        <a href="https://api.whatsapp.com/send?phone=5594991754846&text=Ol%C3%A1%2C%20equipe%20DNA%20Vital%21%20Vim%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20a%20ILIBterapia." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-bold text-marinho bg-marinho-50 hover:bg-marinho-100 px-4 py-2 rounded-full border border-nevoa-escura transition-colors">
+          <span>Saber mais sobre a ILIB</span> <i class="fa-solid fa-arrow-right text-[9px]"></i>
         </a>
       </div>
 
@@ -584,17 +638,17 @@
         <div class="flex flex-wrap items-center justify-between gap-2 mb-2.5 pb-2.5 border-b border-nevoa-escura">
           <div class="flex items-center gap-3 min-w-0">
             <div class="w-11 h-11 rounded-2xl bg-marinho-100 text-marinho flex items-center justify-center text-lg shrink-0">
-              <i class="fa-solid fa-weight-scale"></i>
+              <i class="fa-solid fa-dna"></i>
             </div>
-            <h3 class="font-serif font-bold text-xl text-marinho leading-tight">Queda no Emagrecimento</h3>
+            <h3 class="font-serif font-bold text-xl text-marinho leading-tight">Reposição de Massa</h3>
           </div>
-          <span class="text-[9px] font-bold uppercase tracking-wider bg-nevoa-escura text-marinho-900 px-2.5 py-0.5 rounded-full shrink-0">Acompanhamento</span>
+          <span class="text-[9px] font-bold uppercase tracking-wider bg-marinho text-white px-2.5 py-0.5 rounded-full shrink-0">Fios</span>
         </div>
         <p class="text-textoSuave text-[15px] sm:text-sm leading-relaxed mb-4">
-          Está emagrecendo e começou a perceber mais fios na escova? A saúde capilar também merece atenção durante essa fase.
+          Para fios enfraquecidos, porosos ou danificados: repõe a massa perdida e devolve força, maleabilidade e vitalidade ao cabelo.
         </p>
-        <a href="https://api.whatsapp.com/send?phone=5594991754846&text=Ol%C3%A1%2C%20equipe%20DNA%20Vital%21%20Vim%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20a%20queda%20de%20cabelo%20durante%20o%20emagrecimento." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-bold text-marinho bg-marinho-50 hover:bg-marinho-100 px-4 py-2 rounded-full border border-nevoa-escura transition-colors">
-          <span>Quero orientação</span> <i class="fa-solid fa-arrow-right text-[9px]"></i>
+        <a href="https://api.whatsapp.com/send?phone=5594991754846&text=Ol%C3%A1%2C%20equipe%20DNA%20Vital%21%20Vim%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20a%20Reposi%C3%A7%C3%A3o%20de%20Massa." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-bold text-marinho bg-marinho-50 hover:bg-marinho-100 px-4 py-2 rounded-full border border-nevoa-escura transition-colors">
+          <span>Fortalecer meus fios</span> <i class="fa-solid fa-arrow-right text-[9px]"></i>
         </a>
       </div>
 
@@ -603,17 +657,36 @@
         <div class="flex flex-wrap items-center justify-between gap-2 mb-2.5 pb-2.5 border-b border-nevoa-escura">
           <div class="flex items-center gap-3 min-w-0">
             <div class="w-11 h-11 rounded-2xl bg-celeste-claro text-celeste flex items-center justify-center text-lg shrink-0">
-              <i class="fa-solid fa-wind"></i>
+              <i class="fa-solid fa-palette"></i>
             </div>
-            <h3 class="font-serif font-bold text-xl text-marinho leading-tight">Escova Ozonizada</h3>
+            <h3 class="font-serif font-bold text-xl text-marinho leading-tight">Coloração</h3>
           </div>
-          <span class="text-[9px] font-bold uppercase tracking-wider bg-marinho text-white px-2.5 py-0.5 rounded-full shrink-0">Novidade</span>
+          <span class="text-[9px] font-bold uppercase tracking-wider bg-nevoa-escura text-marinho-900 px-2.5 py-0.5 rounded-full shrink-0">Cor</span>
         </div>
         <p class="text-textoSuave text-[15px] sm:text-sm leading-relaxed mb-4">
-          Mais que uma escova, um tratamento completo: cuida do couro cabeludo e dos fios ao mesmo tempo, deixando o cabelo mais leve, brilhante e com movimento natural.
+          Cor com cuidado: coloração feita respeitando a saúde do couro cabeludo e a qualidade dos fios.
         </p>
-        <a href="https://api.whatsapp.com/send?phone=5594991754846&text=Ol%C3%A1%2C%20equipe%20DNA%20Vital%21%20Vim%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20a%20Escova%20Ozonizada." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-bold text-marinho bg-marinho-50 hover:bg-marinho-100 px-4 py-2 rounded-full border border-nevoa-escura transition-colors">
-          <span>Agendar Escova Ozonizada</span> <i class="fa-solid fa-arrow-right text-[9px]"></i>
+        <a href="https://api.whatsapp.com/send?phone=5594991754846&text=Ol%C3%A1%2C%20equipe%20DNA%20Vital%21%20Vim%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20a%20Colora%C3%A7%C3%A3o." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-bold text-marinho bg-marinho-50 hover:bg-marinho-100 px-4 py-2 rounded-full border border-nevoa-escura transition-colors">
+          <span>Quero colorir</span> <i class="fa-solid fa-arrow-right text-[9px]"></i>
+        </a>
+      </div>
+
+      <!-- CARD 9 -->
+      <div class="sticky-card glare-hover">
+        <div class="flex flex-wrap items-center justify-between gap-2 mb-2.5 pb-2.5 border-b border-nevoa-escura">
+          <div class="flex items-center gap-3 min-w-0">
+            <div class="w-11 h-11 rounded-2xl bg-marinho-100 text-marinho flex items-center justify-center text-lg shrink-0">
+              <i class="fa-solid fa-feather"></i>
+            </div>
+            <h3 class="font-serif font-bold text-xl text-marinho leading-tight">Tratamento de Fios</h3>
+          </div>
+          <span class="text-[9px] font-bold uppercase tracking-wider bg-marinho-100 text-marinho px-2.5 py-0.5 rounded-full shrink-0">Fios</span>
+        </div>
+        <p class="text-textoSuave text-[15px] sm:text-sm leading-relaxed mb-4">
+          Cuidados para fios secos, finos, sem brilho ou danificados, escolhidos de acordo com a necessidade de cada cabelo.
+        </p>
+        <a href="https://api.whatsapp.com/send?phone=5594991754846&text=Ol%C3%A1%2C%20equipe%20DNA%20Vital%21%20Vim%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20o%20Tratamento%20de%20Fios." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-bold text-marinho bg-marinho-50 hover:bg-marinho-100 px-4 py-2 rounded-full border border-nevoa-escura transition-colors">
+          <span>Cuidar dos meus fios</span> <i class="fa-solid fa-arrow-right text-[9px]"></i>
         </a>
       </div>
 
@@ -633,48 +706,24 @@
         Nossos Resultados
       </h2>
       <p class="text-white/70 text-[15px] sm:text-sm mt-2">
-        Resultados, tratamentos e novidades da clínica. Arraste para o lado ou aguarde a rolagem suave:
+        Em breve, os resultados das nossas pacientes aqui.
       </p>
     </div>
 
-    <div id="results-wrapper" class="infinite-track-wrapper">
-      <div id="results-infinite-track" class="infinite-carousel-track">
-        <!-- Fotos renderizadas via JS -->
-      </div>
+    <!-- Ao receber as fotos: preencher FOTOS_RESULTADOS no main.js e voltar o carrossel (results-wrapper) -->
+    <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-4">
+      <div class="cs-box aspect-[4/3]"><span class="cs-title">Coming soon</span><span class="cs-sub">Resultado 01</span></div>
+      <div class="cs-box aspect-[4/3]"><span class="cs-title">Coming soon</span><span class="cs-sub">Resultado 02</span></div>
+      <div class="cs-box aspect-[4/3] hidden sm:flex"><span class="cs-title">Coming soon</span><span class="cs-sub">Resultado 03</span></div>
     </div>
 
-    <!-- ANTES & DEPOIS -->
+    <!-- ANTES & DEPOIS: ao receber as fotos, preencher CASOS_BA no main.js e voltar o comparador -->
     <div class="max-w-4xl mx-auto mt-10">
       <div class="text-center max-w-2xl mx-auto mb-6">
-        <h3 class="font-serif font-bold text-2xl sm:text-3xl text-white">Antes &amp; Depois Interativo</h3>
-        <p class="text-white/70 text-[15px] sm:text-sm mt-2">Escolha um número abaixo e arraste a barra para comparar:</p>
+        <h3 class="font-serif font-bold text-2xl sm:text-3xl text-white">Antes &amp; Depois</h3>
+        <p class="text-white/70 text-[15px] sm:text-sm mt-2">Comparações reais de tratamento chegam em breve.</p>
       </div>
-
-      <div class="ba-tabs-wrap">
-        <div id="ba-tabs" class="ba-tabs" role="group" aria-label="Escolha a transformação"></div>
-      </div>
-
-      <div class="glare-hover bg-white rounded-3xl p-3 sm:p-5 border border-nevoa-escura shadow-xl max-w-md mx-auto">
-        <div class="ba-slider-container mb-3" id="ba-container">
-          <img id="ba-img-depois" class="ba-img" src="assets/img/antes-depois-01-depois.jpg" alt="Depois - Queda e falhas: 4 meses de tratamento - Clínica DNA Vital Fios e Pele" width="600" height="800" loading="lazy" decoding="async" draggable="false">
-          <span class="ba-label ba-label--after">Depois</span>
-          <div class="ba-clip-wrapper" id="ba-clip-wrapper">
-            <img id="ba-img-antes" class="ba-img" src="assets/img/antes-depois-01-antes.jpg" alt="Antes - Queda e falhas: 4 meses de tratamento - Clínica DNA Vital Fios e Pele" width="600" height="800" loading="lazy" decoding="async" draggable="false">
-            <span class="ba-label ba-label--before">Antes</span>
-          </div>
-          <div class="ba-handle-line" id="ba-handle">
-            <div class="ba-handle-button"><i class="fa-solid fa-arrows-left-right" aria-hidden="true"></i></div>
-          </div>
-          <input type="range" min="0" max="100" value="50" id="ba-range" class="ba-range-input" aria-label="Comparar antes e depois arrastando a barra">
-        </div>
-
-        <div class="flex flex-col items-center justify-center gap-1 px-2 pt-2 border-t border-nevoa-escura/40 text-center">
-          <span class="text-[11px] text-textoSuave flex items-center gap-1 font-medium">
-            <i class="fa-solid fa-arrows-left-right text-celeste text-[10px]"></i> Arraste a linha para comparar
-          </span>
-          <span class="text-[10px] text-textoSuave/80">Resultados individuais; cada caso requer avaliação.</span>
-        </div>
-      </div>
+      <div class="cs-box aspect-[4/3] max-w-sm mx-auto"><span class="cs-title">Coming soon</span><span class="cs-sub">Antes &amp; Depois</span></div>
     </div>
 
   </div>
@@ -783,7 +832,7 @@
 </section>
 
 <!-- =========================================================
-     A CLÍNICA (ESPAÇO) — fotos ainda não recebidas
+     A CLÍNICA (ESPAÇO): CARROSSEL DE FOTOS
 ========================================================= -->
 <section id="salao" class="pt-8 pb-6 sm:pt-10 sm:pb-8 px-4 sm:px-6 max-w-6xl mx-auto border-t border-nevoa-escura/50">
   <div class="text-center max-w-xl mx-auto mb-6">
@@ -798,13 +847,15 @@
     </p>
   </div>
 
-  <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-4">
-    <div class="cs-box aspect-video"><span class="cs-title">Coming soon</span><span class="cs-sub">Foto 01 da clínica</span></div>
-    <div class="cs-box aspect-video"><span class="cs-title">Coming soon</span><span class="cs-sub">Foto 02 da clínica</span></div>
-    <div class="cs-box aspect-video"><span class="cs-title">Coming soon</span><span class="cs-sub">Foto 03 da clínica</span></div>
-    <div class="cs-box aspect-video"><span class="cs-title">Coming soon</span><span class="cs-sub">Foto 04 da clínica</span></div>
-    <div class="cs-box aspect-video"><span class="cs-title">Coming soon</span><span class="cs-sub">Foto 05 da clínica</span></div>
-    <div class="cs-box aspect-video"><span class="cs-title">Coming soon</span><span class="cs-sub">Foto 06 da clínica</span></div>
+  <div id="salon-wrapper" class="infinite-track-wrapper">
+    <div id="salon-infinite-track" class="infinite-carousel-track">
+      <!-- Fotos renderizadas via JS (FOTOS_SALAO) -->
+    </div>
+  </div>
+
+  <div class="flex items-center justify-center gap-2 pt-1 text-[11px] text-textoSuave font-medium">
+    <i class="fa-solid fa-arrows-left-right text-celeste text-xs"></i>
+    <span>Arraste para o lado ou toque para ampliar</span>
   </div>
 </section>
 
@@ -837,12 +888,16 @@
       <p class="faq-a">Depende do seu caso. O número de sessões e a frequência são definidos na avaliação, com acompanhamento a cada etapa do tratamento.</p>
     </details>
     <details class="faq-item">
+      <summary class="faq-q"><span>Quais procedimentos a clínica oferece?</span><i class="fa-solid fa-plus faq-icone" aria-hidden="true"></i></summary>
+      <p class="faq-a">Terapia Capilar, Ozonioterapia, Escova Terapêutica, Laserterapia, ILIBterapia, Reposição de Massa, Coloração e Tratamento de Fios. O procedimento indicado para você é definido na avaliação capilar.</p>
+    </details>
+    <details class="faq-item">
       <summary class="faq-q"><span>O que é a Escova Ozonizada?</span><i class="fa-solid fa-plus faq-icone" aria-hidden="true"></i></summary>
       <p class="faq-a">É uma escova que vai além da beleza: cuida do couro cabeludo e dos fios ao mesmo tempo, deixando o cabelo mais leve, brilhante e com movimento natural.</p>
     </details>
     <details class="faq-item">
       <summary class="faq-q"><span>Como faço para agendar?</span><i class="fa-solid fa-plus faq-icone" aria-hidden="true"></i></summary>
-      <p class="faq-a">Pelo WhatsApp (94) 99175-4846, de segunda a sexta, das 9h às 18h. A clínica fica na Rua Angelim, 192, Nova Canaã, em Canaã dos Carajás - PA.</p>
+      <p class="faq-a">Pelo WhatsApp (94) 99175-4846. Atendemos de segunda a sexta, das 9h às 18h, e aos sábados, das 9h às 12h. A clínica fica na Rua Angelim, 192, Nova Canaã, em Canaã dos Carajás - PA.</p>
     </details>
   </div>
 </section>
@@ -868,8 +923,9 @@
         <div class="min-w-0 flex-1">
           <strong class="text-marinho block text-sm mb-0.5 uppercase tracking-wide">Horário de Atendimento</strong>
           <ul class="text-xs text-textoSuave leading-relaxed mt-1 mb-2 grid grid-cols-[auto_1fr] gap-x-5 gap-y-1">
-            <li class="contents"><span>Segunda a sexta-feira</span><span class="font-semibold text-marinho">9h00 – 18h00</span></li>
-            <li class="contents"><span>Sábado e domingo</span><span class="font-semibold text-textoSuave/75">Fechado</span></li>
+            <li class="contents"><span>Segunda a sexta-feira</span><span class="font-semibold text-marinho whitespace-nowrap">9h00 – 18h00</span></li>
+            <li class="contents"><span>Sábado</span><span class="font-semibold text-marinho whitespace-nowrap">9h00 – 12h00</span></li>
+            <li class="contents"><span>Domingo</span><span class="font-semibold text-textoSuave/75">Fechado</span></li>
           </ul>
           <p class="text-xs text-textoSuave leading-relaxed">
             Agende pelo WhatsApp: <a href="https://api.whatsapp.com/send?phone=5594991754846&text=Ol%C3%A1%2C%20equipe%20DNA%20Vital%21%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20capilar." target="_blank" rel="noopener noreferrer" class="font-bold text-marinho whitespace-nowrap">(94) 99175-4846</a>
@@ -920,7 +976,7 @@
       <div class="relative flex flex-col sm:flex-row items-center gap-5 sm:gap-7 text-center sm:text-left">
         <div class="foto-anel w-24 h-24 sm:w-28 sm:h-28 shrink-0">
           <div class="w-full h-full rounded-full overflow-hidden bg-marinho-50">
-            <img src="assets/img/alessandra-perfil.jpg" alt="Alessandra Souza, terapeuta capilar" width="600" height="600" class="w-full h-full object-cover" loading="lazy" decoding="async">
+            <img src="assets/img/alessandra-microscopio-redondo.jpg" alt="Alessandra Souza, terapeuta capilar" width="600" height="600" class="w-full h-full object-cover" loading="lazy" decoding="async">
           </div>
         </div>
         <div class="flex-1 min-w-0">
@@ -968,7 +1024,7 @@
     </div>
 
     <div class="text-[11px] text-white/50 max-w-xl space-y-1">
-      <p>Tratamentos contra queda, caspa e enfraquecimento dos fios, com avaliação e protocolos personalizados.</p>
+      <p>Terapia capilar, ozonioterapia, laserterapia e tratamento de fios, com avaliação e protocolos personalizados.</p>
       <p class="pt-2">&copy; <span id="year"></span> Clínica DNA Vital Fios e Pele. Todos os direitos reservados.</p>
       <p class="pt-1">Experiência digital desenvolvida por: <a href="https://usetap.com.br/" target="_blank" rel="noopener noreferrer" class="font-bold text-white/80 hover:text-white border-b border-current">UseTap</a></p>
     </div>
@@ -994,7 +1050,7 @@
       <div class="bg-white rounded-2xl p-4 space-y-2 border border-nevoa-escura shadow-sm">
         <div class="flex items-center justify-between">
           <span class="text-[10px] bg-marinho text-white px-2.5 py-0.5 rounded-full font-bold uppercase">Chave PIX &bull; Principal</span>
-          <span class="text-[11px] cs-inline">Coming soon</span>
+          <span class="text-[11px] font-bold text-marinho">Celular</span>
         </div>
         <div class="flex justify-between items-start gap-2 pt-1">
           <span class="text-textoSuave shrink-0">Beneficiário:</span>
@@ -1006,9 +1062,9 @@
         </div>
         <div class="flex justify-between items-center pt-1 border-t border-nevoa-escura/50">
           <span class="text-textoSuave">Chave:</span>
-          <span class="cs-inline text-sm">Coming soon</span>
+          <span class="font-bold text-sm text-marinho">(94) 99175-4846</span>
         </div>
-        <button type="button" disabled class="w-full mt-2 py-2.5 rounded-xl bg-marinho/40 text-white font-bold text-xs flex items-center justify-center gap-2 cursor-not-allowed">
+        <button type="button" onclick="copiarTexto('+5594991754846', 'Chave PIX copiada!')" class="w-full mt-2 py-2.5 rounded-xl bg-marinho hover:bg-marinho-800 text-white font-bold text-xs flex items-center justify-center gap-2 transition-colors">
           <i class="fa-regular fa-copy"></i> Copiar Chave PIX
         </button>
       </div>

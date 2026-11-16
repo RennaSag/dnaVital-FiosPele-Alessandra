@@ -9,30 +9,23 @@ const SITE_URL = 'https://dnavitalcanaa.usetap.com.br/';
 // Celular/tablet: carrosséis usam a rolagem nativa (rápida, com a inércia do próprio aparelho)
 const TELA_TOQUE = window.matchMedia && window.matchMedia('(hover: none) and (pointer: coarse)').matches;
 
-/* Antes e depois (fotos publicadas no Instagram da clínica) */
-const CASOS_BA = [
-  { nome: 'Queda e falhas: 4 meses de tratamento', antes: 'assets/img/antes-depois-01-antes.jpg', depois: 'assets/img/antes-depois-01-depois.jpg' },
-  { nome: 'Mais volume e menos queda', antes: 'assets/img/antes-depois-02-antes.jpg', depois: 'assets/img/antes-depois-02-depois.jpg' }
-];
+/* Antes e depois: ainda sem fotos (a seção mostra "Coming soon"). Ao receber, preencha e troque o HTML pelo comparador.
+   Formato: { nome: 'Título do caso', antes: 'assets/img/...', depois: 'assets/img/...' } */
+const CASOS_BA = [];
 
-/* Resultados e tratamentos (artes do Instagram). quadrado: true = arte 1:1 */
-const FOTOS_RESULTADOS = [
-  { src: 'assets/img/resultado-01.jpg', tag: 'Antes & Depois', titulo: '4 Meses de Tratamento', quadrado: true },
-  { src: 'assets/img/resultado-02.jpg', tag: 'Depoimento', titulo: 'Mais Volume, Menos Queda', quadrado: true },
-  { src: 'assets/img/resultado-03.jpg', tag: 'Novidade', titulo: 'Escova Ozonizada', quadrado: true },
-  { src: 'assets/img/resultado-04.jpg', tag: 'Alopecia Areata', titulo: 'A Solução na Terapia Capilar' },
-  { src: 'assets/img/resultado-06.jpg', tag: 'Saúde Hormonal', titulo: 'Menopausa e os Fios', quadrado: true },
-  { src: 'assets/img/resultado-05.jpg', tag: 'Alopecia Areata', titulo: 'Estratégia e Acompanhamento' },
-  { src: 'assets/img/resultado-07.jpg', tag: 'Emagrecimento', titulo: 'Queda na Escova?' },
-  { src: 'assets/img/resultado-08.jpg', tag: 'Saúde Integral', titulo: 'Cuidar de Dentro para Fora', quadrado: true },
-  { src: 'assets/img/resultado-09.jpg', tag: 'Fibra Capilar', titulo: 'Ciência na Reconstrução' }
-];
+/* Resultados: ainda sem fotos (a seção mostra "Coming soon"). Formato: { src, tag, titulo, quadrado: true para arte 1:1 } */
+const FOTOS_RESULTADOS = [];
 
-/* Fotos do espaço: ainda sem fotos (a seção mostra "Coming soon"). Ao receber, preencha e troque o HTML pelo carrossel. */
-const FOTOS_SALAO = [];
+/* Fotos do espaço (fotos 3:4 enviadas pela clínica) */
+const FOTOS_SALAO = [
+  { src: 'assets/img/clinica-fachada.jpg', tag: 'Nosso Espaço', titulo: 'Fachada da Clínica' },
+  { src: 'assets/img/clinica-sala-01.jpg', tag: 'Nosso Espaço', titulo: 'Sala de Atendimento' },
+  { src: 'assets/img/laserterapia.jpg', tag: 'Procedimento', titulo: 'Laserterapia' },
+  { src: 'assets/img/clinica-sala-02.jpg', tag: 'Nosso Espaço', titulo: 'Sala de Atendimento' }
+];
 
 // [abre, fecha] em minutos, índice 0 = domingo. null = fechado. Tem que bater com a lista da seção Localização.
-const HORARIOS = [null, [540, 1080], [540, 1080], [540, 1080], [540, 1080], [540, 1080], null];
+const HORARIOS = [null, [540, 1080], [540, 1080], [540, 1080], [540, 1080], [540, 1080], [540, 720]];
 const FUSO = 'America/Belem'; // Canaã dos Carajás - PA
 
 /* 2. ANTES E DEPOIS */
@@ -476,7 +469,7 @@ function criarCardsResultados() {
   return FOTOS_RESULTADOS.map((f, i) => criarCardFoto(f, i, f.quadrado ? 'is-square' : ''));
 }
 function criarCardsSalao() {
-  return FOTOS_SALAO.map((f, i) => criarCardFoto(f, i, 'is-wide'));
+  return FOTOS_SALAO.map((f, i) => criarCardFoto(f, i, ''));
 }
 
 /* 5. BOTÃO DO WHATSAPP NÃO SOBREPÕE O RODAPÉ */
@@ -653,7 +646,7 @@ function downloadVCard() {
     `URL:${SITE_URL}`,
     'ADR;TYPE=WORK:;;Rua Angelim\\, 192 - Nova Canaã;Canaã dos Carajás;PA;68356-013;Brasil',
     'X-SOCIALPROFILE;TYPE=instagram:https://www.instagram.com/clinicadnavitalfiosepele/',
-    'NOTE:Avaliação capilar com tricoscopia\\, terapia capilar para queda\\, alopecia areata\\, caspa e couro cabeludo\\, fortalecimento dos fios\\, queda hormonal e Escova Ozonizada.',
+    'NOTE:Terapia capilar\\, ozonioterapia\\, escova terapêutica\\, laserterapia\\, ILIBterapia\\, reposição de massa\\, coloração e tratamento de fios. Seg a sex 9h às 18h\\, sáb 9h às 12h.',
     'END:VCARD'
   ].join('\r\n');
 

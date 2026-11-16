@@ -725,3 +725,25 @@ a { text-decoration: none !important; color: inherit; }
 .sinal__check:checked ~ span { color: #FFFFFF; }
 .sinal:has(.sinal__check:checked) { background: rgba(89, 159, 203, .2); border-color: #599FCB; }
 .sinal__check:focus-visible + i { outline: 2px solid #FFFFFF; outline-offset: 2px; }
+
+/* TRAJETÓRIA DA TERAPEUTA */
+.trajetoria-foto { margin: 0; border-radius: 1.75rem; overflow: hidden; aspect-ratio: 3 / 2; border: 1px solid rgba(1, 44, 76, .18);
+  box-shadow: 0 24px 50px -24px rgba(1, 36, 63, .35); background: #EAF2F8; }
+.trajetoria-foto img { width: 100%; height: 100%; object-fit: cover; object-position: 40% center; display: block; cursor: zoom-in; }
+.marcos { list-style: none; padding: 0; display: grid; gap: .6rem; }
+.marco { display: flex; align-items: center; gap: .85rem; background: #FFFFFF; border: 1px solid #BFD5E6; border-radius: 1rem; padding: .65rem .9rem; }
+.marco__ano { flex-shrink: 0; min-width: 3.4rem; text-align: center; font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 700; font-size: 1.2rem;
+  color: #FFFFFF; background: #012C4C; border-radius: .7rem; padding: .2rem .5rem; }
+.marco__txt { font-size: 12px; font-weight: 600; color: #012C4C; line-height: 1.35; }
+.trajetoria-mais > summary { list-style: none; cursor: pointer; display: inline-flex; align-items: center; gap: .45rem; font-size: 12px; font-weight: 700;
+  text-transform: uppercase; letter-spacing: .08em; color: #012C4C; background: #EAF2F8; border: 1px solid #BFD5E6; border-radius: 999px; padding: .5rem 1rem; }
+.trajetoria-mais > summary::-webkit-details-marker { display: none; }
+.trajetoria-mais > summary i { font-size: 10px; transition: transform .25s ease; }
+.trajetoria-mais[open] > summary i { transform: rotate(180deg); }
+.trajetoria-mais__fechar, .trajetoria-mais[open] .trajetoria-mais__abrir { display: none; }
+.trajetoria-mais[open] .trajetoria-mais__fechar { display: inline; }
+.trajetoria-mais > summary:focus-visible { outline: 3px solid #012C4C; outline-offset: 3px; }
+
+/* Indicações da terapia capilar (chips no card de tratamento) */
+.indicacoes { list-style: none; padding: 0; margin: -.25rem 0 1rem; display: flex; flex-wrap: wrap; gap: .4rem; }
+.indicacoes li { font-size: 10.5px; font-weight: 600; color: #012C4C; background: #EAF2F8; border: 1px solid #BFD5E6; border-radius: 999px; padding: .2rem .65rem; }

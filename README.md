@@ -5,19 +5,25 @@ Site estático (HTML + CSS + JS puros), publicado no Cloudflare Workers (Static 
 
 ## A empresa
 
-Clínica capilar da terapeuta **Alessandra Souza**. Tratamentos (tirados do Instagram da clínica):
+Clínica capilar da terapeuta **Alessandra Souza** (na beleza desde 2013, terapeuta capilar desde
+2020, formada pelo complexo DNA Vital em Florianópolis - SC). A trajetória completa, enviada pela
+cliente, está na seção `#trajetoria`.
 
-- Avaliação capilar com tricoscopia
-- Terapia capilar para queda de cabelo
-- Alopecia areata
-- Caspa e couro cabeludo
-- Fortalecimento dos fios
-- Queda hormonal e menopausa
-- Queda durante o emagrecimento
-- Escova Ozonizada (novidade)
+Procedimentos (lista enviada pela cliente), além da avaliação capilar com tricoscopia:
+
+- Terapia Capilar (indicações tiradas da fachada: queda, calvície, alopecia areata, caspa,
+  dermatite, seborreia, psoríase, oleosidade)
+- Ozonioterapia
+- Escova Terapêutica (inclui a Escova Ozonizada)
+- Laserterapia
+- ILIBterapia
+- Reposição de Massa
+- Coloração
+- Tratamento de Fios
 
 Endereço: Rua Angelim, 192 · Nova Canaã, Canaã dos Carajás - PA, 68356-013.
-Atendimento: segunda a sexta, 9h00 às 18h00. WhatsApp: (94) 99175-4846.
+Atendimento: segunda a sexta, 9h00 às 18h00; sábado, 9h00 às 12h00. WhatsApp: (94) 99175-4846.
+PIX: chave celular (94) 99175-4846 (o botão copia `+5594991754846`).
 
 **Paleta:** tirada do logo (`Captures/Logos.pdf`): marinho `#012C4C` e azul `#599FCB`.
 O fundo `#EAF2F8` e a escala 50..950 foram derivados dessas duas cores.
@@ -45,8 +51,10 @@ textos pequenos usam o tom escurecido `#2B6E9B` (5,5:1 no branco).
 - Perguntas frequentes (`#duvidas`, com `<details>` nativo, sem JS) e marcação FAQPage para o Google
 - Link "Pular para o conteúdo" para quem navega pelo teclado
 - Tratamentos em cards "sticky" em cascata, com passo a passo (avaliação, protocolo, acompanhamento)
-- Carrossel infinito de resultados (artes do Instagram) com arraste, inércia e foto ampliada
-- Antes & Depois interativo com 2 casos
+- Trajetória da terapeuta com linha do tempo e "Continuar lendo" (`<details>`, sem JS)
+- Resultados e Antes & Depois em "Coming soon" (o carrossel e o comparador voltam ao preencher
+  `FOTOS_RESULTADOS` e `CASOS_BA` no main.js e restaurar o HTML)
+- Carrossel infinito das fotos do espaço (`FOTOS_SALAO`) com arraste, inércia e foto ampliada
 - Carrossel de depoimentos
 - Localização com mapa do Google, rota e botão de avaliação no Google
 - Modal PIX e modal Compartilhar (copiar link, WhatsApp, compartilhar nativo, Whats Direct,
@@ -110,7 +118,14 @@ Detalhes em `DEPLOY.md`.
 
 ## Ainda "Coming soon"
 
-- Anos de carreira e anos de clínica (sem data confirmada)
-- Chave PIX
-- Fotos do espaço da clínica (6 lugares reservados)
+- Anos de clínica (sem data de abertura)
+- Beneficiário e instituição do PIX
+- Fotos de resultados e de antes e depois (as artes antigas do Instagram foram removidas a pedido)
 - Depoimentos do Google (há 1 depoimento real, publicado no Instagram, e 3 cards reservados)
+
+## Fotos
+
+Originais em `../Captures/Fotos/` (1 a 7). Versões em `assets/img/`:
+`clinica-fachada`, `clinica-sala-01`, `clinica-sala-02`, `laserterapia` (3:4, carrossel do espaço),
+`alessandra-retrato` (hero, 4:5), `alessandra-perfil-redondo` (card da terapeuta),
+`alessandra-microscopio-redondo` (chamada final) e `alessandra-tricoscopia` (trajetória, 3:2).
